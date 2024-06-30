@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Envelope Letter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <script src="script.js"></script> <!-- Your custom script -->
+</head>
+<body>
+    <div class="envelope" id="envelope" onclick="playAudio()">
+        <div class="flap"></div>
+        <div class="letter">
+            <h1 id="greeting">Happy 3rd monthsary to us, my lovee,</h1>
+            <p id="content">
+                As our special day arrives, I want to take a moment to express how incredibly blessed I feel to have you in my life. You make me feel incredibly special, seen, heard, and cherished in ways I never thought possible. Every day with you is a reminder of how much you mean to me.<br><br>
+
+                I want you to know that I deeply appreciate everything you do, no matter how big or small. Your gestures of love and kindness fill my heart with gratitude. Whether it's a thoughtful word, a caring deed, or simply being there when I need you most, you always manage to make a difference in my life.<br><br>
+
+                Thank you for understanding me like no one else does, for listening to my thoughts and fears, and for being my pillar of strength. Your presence in my life is a constant source of comfort and joy.<br><br>
+
+                Even in your busiest moments, you make time for us, and that means the world to me. Thank you for choosing to love me every single day, for accepting me as I am, and for being my partner in this beautiful journey we're on together.<br><br>
+
+                As we celebrate our 3rd monthsary, I look forward to many more moments filled with love, laughter, and shared dreams. You are my everything, and I am grateful beyond words to have you by my side.<br><br>
+
+                With all my love,<br>
+                Wyslie Van
+            </p>
+        </div>
+    </div>
+
+    <!-- Audio Player outside the Envelope -->
+    <audio id="bgMusic" controls>
+        <source src="only.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Arrow Link -->
+    <a href="another.html" class="arrow-link">
+        <span>CLICK ME</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20.293 12.293l-7-7A1 1 0 0 0 12.707 5L18.414 10H3a1 1 0 0 0 0 2h15.414l-5.707 5.707a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"/></svg>
+    </a>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("bgMusic");
+            audio.play();
+        }
+    </script>
+</body>
+</html>

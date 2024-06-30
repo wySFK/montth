@@ -1,0 +1,109 @@
+/* Global Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Envelope Styling */
+.envelope {
+    position: relative;
+    width: 780px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    transition: transform 0.8s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    transition: transform 0.8s ease;
+    box-sizing: border-box;
+    padding: 40px; /* Increased padding for larger content */
+    overflow-y: auto; /* Enable scrolling if letter content exceeds height */
+    opacity: 0; /* Initially hide content */
+}
+
+.letter.show {
+    opacity: 1; /* Show content after animation */
+    transform: rotateX(0deg); /* Bring letter to the front */
+}
+
+.letter-content {
+    transform: rotateX(0deg); /* Ensure content is visible after animation */
+}
+
+.letter h1 {
+    margin-top: 0;
+    font-size: 25px; /* Larger font size for heading */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    font-size: 18px; /* Larger font size for paragraphs */
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Audio Player Styling */
+#bgMusic {
+    position: absolute;
+    bottom: -10px; /* Adjust bottom position as needed */
+    left: calc(50% - 150px); /* Adjust left position as needed */
+}
+
+/* Arrow Link Styling */
+/* Arrow Link Styling */
+.arrow-link {
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.arrow-link span {
+    margin-right: 10px; /* Adjust spacing between text and arrow */
+}
+
+.arrow-link svg {
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.arrow-link:hover svg {
+    transform: translateX(5px); /* Adjust the hover effect */
+}
